@@ -30,7 +30,7 @@ const QueryData = (props) => {
             } catch (err) {
                 resolve("NO connection, showing offline results")
             }
-            resolve("Connection is ok, showing the latest results")
+            resolve("Connection is ok")
         });
 
         const promiseHanging = new Promise((resolve) => {
@@ -61,7 +61,7 @@ const QueryData = (props) => {
 
     return (
         <div>
-            <h1 id="connection-status"></h1>
+            <h3 id="connection-status"></h3>
 
             {users.length > 0 ? <Users users={users} /> : 'No users found...'}
 
